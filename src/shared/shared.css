@@ -1,0 +1,10 @@
+:root {
+  --sidebar-bg-color: #0d111d;
+  --sidebar-item-focus: #181f2f;
+  --main-color: #00cdcd;
+  --main-bg-color: #090d16;
+}
+
+.sidebar-item:hover:not(.bg-\[var\(--sidebar-item-focus\)\]) {
+  background-color: var(--sidebar-item-focus);
+}
