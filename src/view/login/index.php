@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -84,7 +85,19 @@
           Acesse o painel administrativo.</p>
       </div>
 
-      <form action="#" method="POST" class="space-y-4">
+
+      <?php
+      if (isset($_SESSION['credenciais-invalidas'])):
+      ?>
+        <div id="errorMessage" class="flex gap-2 items-center justify-between bg-red-600/10 border border-red-600/50 rounded text-red-500 px-2 py-1 mb-8">
+          Usuário ou senha incorretos.
+          <i id="dismissErrorMessage" class="fa fa-times cursor-pointer p-1"></i>
+        </div>
+      <?php
+        unset($_SESSION['credenciais-invalidas']);
+      endif; ?>
+
+      <form action="../actions/login-action.php" method="POST" class="space-y-4">
         <div>
           <label for="email" class="block text-[13px] font-semibold text-[var(--color-text-muted-300)] mb-2">E-mail</label>
           <div class="relative group">
