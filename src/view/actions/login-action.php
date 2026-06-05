@@ -5,7 +5,6 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/dal/UsuarioDal.php');
 
 use \dal\UsuarioDal;
 
-
 $email = $_POST['email'] ?? null;
 $senha = $_POST['password'] ?? null;
 

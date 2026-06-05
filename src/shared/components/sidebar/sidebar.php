@@ -1,11 +1,19 @@
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'] . '/dal/UsuarioDal.php');
+
+use \dal\UsuarioDal;
+
+$idUsuarioLogado = $_SESSION['usuario-logado'];
+
+$dal = new UsuarioDal();
+$usuario = $dal->findById($idUsuarioLogado);
+?>
 <nav
   id="desktop-sidebar"
-  class="w-100 h-screen text-white flex flex-col bg-[var(--sidebar-bg-color)] border-r border-r-gray-800"
->
+  class="w-100 h-screen text-white flex flex-col bg-[var(--sidebar-bg-color)] border-r border-r-gray-800">
   <div class="flex items-center p-3 gap-2">
     <div
-      class="relative before:shadow-[0px_0px_30px_10px_var(--main-color)] before:bottom-1/2 before:absolute before:right-1/2"
-    >
+      class="relative before:shadow-[0px_0px_30px_10px_var(--main-color)] before:bottom-1/2 before:absolute before:right-1/2">
       <img class="w-10 h-10" src="/images/icon.svg" alt="" />
     </div>
 
@@ -22,59 +30,50 @@
         <a class="flex-1 p-2 flex gap-2" href="/view/">
           <i
             style="display: inline-flex"
-            class="fa fa-cubes basis-5 justify-center items-center"
-          ></i>
-          Dashboard</a
-        >
+            class="fa fa-cubes basis-5 justify-center items-center"></i>
+          Dashboard</a>
       </li>
       <li class="sidebar-item rounded-lg transition-all cursor-pointer">
         <a class="flex-1 p-2 flex gap-2" href="/view/modules/produto/">
           <i
             style="display: inline-flex"
-            class="fa fa-box basis-5 justify-center items-center"
-          ></i>
-          Produtos</a
-        >
+            class="fa fa-box basis-5 justify-center items-center"></i>
+          Produtos</a>
       </li>
       <li class="sidebar-item rounded-lg transition-all cursor-pointer">
         <a class="flex-1 p-2 flex gap-2" href="/view/modules/cliente/">
           <i
             style="display: inline-flex"
-            class="fa fa-user-group basis-5 justify-center items-center"
-          ></i>
-          Clientes</a
-        >
+            class="fa fa-user-group basis-5 justify-center items-center"></i>
+          Clientes</a>
       </li>
       <li class="sidebar-item rounded-lg transition-all cursor-pointer">
         <a class="flex-1 p-2 flex gap-2" href="/view/modules/pedido/">
           <i
             style="display: inline-flex"
-            class="fa fa-cart-shopping basis-5 justify-center items-center"
-          ></i>
-          Pedidos</a
-        >
+            class="fa fa-cart-shopping basis-5 justify-center items-center"></i>
+          Pedidos</a>
       </li>
       <li class="sidebar-item rounded-lg transition-all cursor-pointer">
         <a class="flex-1 p-2 flex gap-2" href="/view/modules/item-pedido/">
           <i
             style="display: inline-flex"
-            class="fa fa-list-ol basis-5 justify-center items-center"
-          ></i
-          >Itens de Pedido</a
-        >
+            class="fa fa-list-ol basis-5 justify-center items-center"></i>Itens de Pedido</a>
       </li>
     </ul>
   </div>
 
   <div class="flex flex-col gap-4 p-3">
     <div>
-      <h3 class="font-semibold">Usuário</h3>
-      <h4 class="text-sm text-gray-400">EmailUsuario@gmail.com</h4>
+      <?php if (isset($usuario)): ?>
+        <h3 class="font-semibold"><?php echo $usuario->getNome() ?></h3>
+        <h4 class="text-sm text-gray-400"><?php echo $usuario->getEmail() ?></h4>
+      <?php
+      endif; ?>
     </div>
     <a
       href="../../../view/actions/logout.php"
-      class="flex items-center gap-3 py-2 px-4 rounded-lg bg-[var(--main-bg-color)] cursor-pointer border border-gray-800 hover:bg-[var(--main-bg-color-hover)] transition-all ease-in-out delay-100"
-    >
+      class="flex items-center gap-3 py-2 px-4 rounded-lg bg-[var(--main-bg-color)] cursor-pointer border border-gray-800 hover:bg-[var(--main-bg-color-hover)] transition-all ease-in-out delay-100">
       <i class="fa fa-arrow-right-from-bracket"></i>
       Sair
     </a>
