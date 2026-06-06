@@ -8,7 +8,7 @@ $idUsuarioLogado = $_SESSION['usuario-logado'];
 $dal = new UsuarioDal();
 $usuario = $dal->findById($idUsuarioLogado);
 ?>
-<aside class="text-white">
+<aside>
   <div class="w-full flex flex-row items-center lg:hidden bg-[var(--sidebar-bg-color)] border-b border-b-gray-800 p-3 pr-0 gap-4">
 
 

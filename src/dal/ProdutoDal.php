@@ -23,13 +23,13 @@ class ProdutoDal
 
             foreach ($dadosBrutos as $linha) {
                 $produto = new Produto();
-                $produto->setId($linha['id_produto']);
+                $produto->setId($linha['id']);
                 $produto->setSku($linha['sku']);   //Sku é o código único do produto, tipo categoria com código(Stock Keeping Unit)
                 $produto->setNome($linha['nome']);
                 $produto->setCategoria($linha['categoria']);
                 $produto->setPreco($linha['preco']);
                 $produto->setEstoque($linha['estoque']);
-                
+
                 $listaProdutos[] = $produto;
             }
 
@@ -46,7 +46,7 @@ class ProdutoDal
             $sql = "SELECT * FROM produto WHERE id = ?";
             $con = Conexao::conectar();
             $stmt = $con->prepare($sql);
-            $stmt->execute([$id]); 
+            $stmt->execute([$id]);
             $dadoBruto = $stmt->fetch(\PDO::FETCH_ASSOC);
             Conexao::desconectar();
 
@@ -75,15 +75,15 @@ class ProdutoDal
 
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        
+
         $result = $query->execute([
-            $produto->getSku(), 
-            $produto->getNome(), 
-            $produto->getCategoria(), 
-            $produto->getPreco(), 
+            $produto->getSku(),
+            $produto->getNome(),
+            $produto->getCategoria(),
+            $produto->getPreco(),
             $produto->getEstoque()
         ]);
-        
+
         Conexao::desconectar();
 
         return $result;
@@ -95,16 +95,16 @@ class ProdutoDal
 
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        
+
         $result = $query->execute([
-            $produto->getSku(), 
-            $produto->getNome(), 
-            $produto->getCategoria(), 
-            $produto->getPreco(), 
-            $produto->getEstoque(), 
+            $produto->getSku(),
+            $produto->getNome(),
+            $produto->getCategoria(),
+            $produto->getPreco(),
+            $produto->getEstoque(),
             $produto->getId()
         ]);
-        
+
         Conexao::desconectar();
 
         return $result;

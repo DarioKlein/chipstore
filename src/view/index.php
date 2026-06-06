@@ -9,9 +9,9 @@
   <title>Dashboard</title>
 </head>
 
-<body class="bg-[var(--main-bg-color)]">
-  <main class="flex flex-col lg:flex-row w-screen h-screen overflow-hidden">
-    <?php include_once('../shared/components/sidebar/sidebar.php') ?>
+<body class="flex flex-col lg:flex-row bg-[var(--main-bg-color)] text-white">
+  <?php include_once('../shared/components/sidebar/sidebar.php') ?>
+  <main class="flex-1 overflow-hidden p-3">
   </main>
   <script src="../shared/components/sidebar/sidebar.js"></script>
 </body>
