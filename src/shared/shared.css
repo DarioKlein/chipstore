@@ -27,3 +27,24 @@ button {
 .sidebar-item:hover:not(.bg-\[var\(--sidebar-item-focus\)\]) {
   background-color: var(--sidebar-item-focus);
 }
+
+div.hidden-important {
+  display: none;
+}
+
+@media (width >= 64rem) {
+  #sidebar.lg\:w-fit .sidebar-header:hover #sidebar-logo {
+    display: none;
+  }
+
+  #sidebar.lg\:w-fit .sidebar-header:hover #uncollapse-side-bar {
+    display: flex !important;
+  }
+}
+
+@media (width < 64rem) {
+  #collapse-side-bar,
+  #collapse-side-bar {
+    display: none !important;
+  }
+}
