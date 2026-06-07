@@ -103,7 +103,7 @@ $usuario = $dal->findById($idUsuarioLogado);
       </div>
       <a
         id="logout-button"
-        href="../../../view/actions/logout.php"
+        href="/view/actions/logout.php"
         class="flex items-center gap-3 p-3 rounded-lg bg-[var(--main-bg-color)] cursor-pointer border border-gray-800 hover:bg-[var(--main-bg-color-hover)] transition-all ease-in-out delay-100">
         <i class="sidebar-icon fa fa-arrow-right-from-bracket"></i>
         <p class="collapsable-text">Sair</p>
