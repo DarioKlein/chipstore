@@ -11,6 +11,7 @@ use \dal\ProdutoDal;
 $dal = new ProdutoDal();
 $listaProdutos = $dal->findAll();
 $quantidadeCadastrada = count($listaProdutos);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,7 +38,16 @@ $quantidadeCadastrada = count($listaProdutos);
       </div>
       <a href="./adicionar/" class="cursor-pointer px-4 py-2 bg-(--main-color) text-(--main-bg-color) w-full sm:w-fit rounded-lg hover:shadow-[0_0_7.5px_var(--main-color)] focus:shadow-[0_0_0_5px_var(--main-color-transparent)] transition-all"><i class="fa fa-plus"></i> Novo Produto</a>
     </header>
-    <div class="border border-gray-800 mt-6 rounded-2xl overflow-auto scrollbar-none max-h-197.5">
+    <?php if (isset($_SESSION['msg-produto-criado'])): ?>
+      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+        Produto cadastrado com sucesso.
+        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+      </div>
+    <?php
+      unset($_SESSION['msg-produto-criado']);
+    endif;
+    ?>
+    <div class="border border-gray-800 mt-6 rounded-2xl overflow-auto scrollbar-none max-h-194.5">
       <table class="border-collapse w-full min-w-220">
         <thead class="border-b border-b-gray-800 px-2">
           <tr class="text-gray-400">
@@ -72,6 +82,7 @@ $quantidadeCadastrada = count($listaProdutos);
     </div>
   </main>
   <script src="/shared/components/sidebar/sidebar.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

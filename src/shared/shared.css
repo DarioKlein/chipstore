@@ -8,6 +8,10 @@
   --main-bg-color-hover: #171a23;
   --main-bg-color-composition: #34d399;
   --second-bg-color: #0f1422;
+  --secondary-bg-color: #0c141f;
+  --back-btn-color: #1f2937;
+  --back-btn-color-transparent: #1f29371a;
+  --input-bg-color: #111a26;
 
   --mini-card-bg-color: rgb(31 41 55 / 0.4);
   --mini-card-border-color: rgb(55 65 81 / 0.3);
@@ -19,6 +23,12 @@
   --color-text-muted-400: #9ca3af;
   --color-text-muted-500: #6b7280;
   --color-text-button-submit: #0f1422;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 button {
