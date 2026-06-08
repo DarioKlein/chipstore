@@ -48,13 +48,13 @@ if (isset($_SESSION['conteudo-produto-erro'])) {
               value="<?php echo isset($_SESSION['conteudo-produto-erro'])
                         ? $produto->getNome()
                         : ''
-                      ?>" placeholder="Ex: Processador Ryzen 9 9950X" class="min-w-0 px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="nome" name="nome" type="text" required>
+                      ?>" placeholder="Ex: Processador Ryzen 9 9950X" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="nome" name="nome" type="text" required>
           </div>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-col sm:flex-row gap-4">
             <div class="flex flex-col flex-1 gap-2">
               <div class="flex flex-col justify-center gap-1">
                 <label class="font-bold text-sm" for="categoria">Categoria</label>
-                <select id="categoria" name="categoria" class="min-w-0 px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) text-white focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors" required>
+                <select id="categoria" name="categoria" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) text-white focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors" required>
                   <option value="" class="bg-(--input-bg-color)">Selecione uma Categoria</option>
                   <option value="Processadores" class="bg-(--input-bg-color)"
                     <?php echo isset($_SESSION['conteudo-produto-erro']) && 'Processadores' == $produto->getCategoria()
@@ -118,7 +118,7 @@ if (isset($_SESSION['conteudo-produto-erro'])) {
                 <input value="<?php echo isset($_SESSION['conteudo-produto-erro'])
                                 ? $produto->getEstoque()
                                 : ''
-                              ?>" placeholder="0" class="min-w-0 px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="estoque" name="estoque" type="number" min="0" required>
+                              ?>" placeholder="0" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="estoque" name="estoque" type="number" min="0" required>
               </div>
             </div>
             <div class="flex flex-col flex-1 gap-2">
@@ -127,14 +127,14 @@ if (isset($_SESSION['conteudo-produto-erro'])) {
                 <input value="<?php echo isset($_SESSION['conteudo-produto-erro'])
                                 ? $produto->getPreco()
                                 : ''
-                              ?>" placeholder="0,00" class="min-w-0 px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="preco" name="preco" type="number" min="0" step="0.01" required>
+                              ?>" placeholder="0,00" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="preco" name="preco" type="number" min="0" step="0.01" required>
               </div>
               <div class="flex flex-col justify-center gap-1">
                 <label class="font-bold text-sm" for="sku">SKU</label>
                 <input value="<?php echo isset($_SESSION['conteudo-produto-erro'])
                                 ? $produto->getSku()
                                 : ''
-                              ?>" placeholder="Ex: CHP-0001" class="min-w-0 px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="sku" name="sku" type="text" required>
+                              ?>" placeholder="Ex: CHP-0001" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="sku" name="sku" type="text" required>
               </div>
             </div>
           </div>
