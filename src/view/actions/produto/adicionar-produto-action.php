@@ -22,7 +22,6 @@ $produto->setSku($sku);
 $dal = new ProdutoDal();
 $result = $dal->Insert($produto);
 if ($result) {
-  unset($_SESSION['conteudo-produto-erro']);
   $_SESSION['msg-produto-criado'] = true;
   header('Location: /view/modules/produto/');
 } else {

@@ -68,6 +68,26 @@ class ProdutoDal
         }
     }
 
+    public function isSkuRegisteredNotEquals(string $sku, int $id)
+    {
+        try {
+            $sql = "SELECT id FROM produto WHERE sku = ? AND id != ?";
+            $con = Conexao::conectar();
+            $stmt = $con->prepare($sql);
+            $stmt->execute([$sku, $id]);
+            $dadoBruto = $stmt->fetch(\PDO::FETCH_ASSOC);
+            Conexao::desconectar();
+
+            if (!$dadoBruto) {
+                return false;
+            }
+
+            return true;
+        } catch (\PDOException $e) {
+            return false;
+        }
+    }
+
     public function Insert(Produto $produto)
     {
         try {

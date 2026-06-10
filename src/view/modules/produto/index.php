@@ -47,6 +47,33 @@ $quantidadeCadastrada = count($listaProdutos);
       unset($_SESSION['msg-produto-criado']);
     endif;
     ?>
+    <?php if (isset($_SESSION['msg-produto-editado-sucesso'])): ?>
+      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+        Produto editado com sucesso.
+        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+      </div>
+    <?php
+      unset($_SESSION['msg-produto-editado-sucesso']);
+    endif;
+    ?>
+    <?php if (isset($_SESSION['msg-produto-deletado-sucesso'])): ?>
+      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+        Produto removido com sucesso.
+        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+      </div>
+    <?php
+      unset($_SESSION['msg-produto-deletado-sucesso']);
+    endif;
+    ?>
+    <?php if (isset($_SESSION['msg-produto-deletado-erro'])): ?>
+      <div id="successMessage" class="flex gap-2 items-center justify-between bg-red-600/10 border border-red-600/50 rounded text-red-600 px-2 py-1 mt-4">
+        Erro ao remover produto.
+        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+      </div>
+    <?php
+      unset($_SESSION['msg-produto-deletado-erro']);
+    endif;
+    ?>
     <div class="border border-gray-800 mt-6 rounded-2xl overflow-auto scrollbar-none max-h-194.5">
       <table class="border-collapse w-full min-w-220">
         <thead class="border-b border-b-gray-800 px-2">
@@ -72,8 +99,8 @@ $quantidadeCadastrada = count($listaProdutos);
               <td class="py-4 text-center text-(--main-color)">R$ <?php echo $produto->getPreco() ?></td>
               <td class="py-4 text-center"><?php echo $produto->getEstoque() ?></td>
               <td class="py-4 pr-4 text-center">
-                <button class="w-10 h-10 p-1 rounded-md"><i class="fa fa-pencil text-gray-400"></i></button>
-                <button class="w-10 h-10 p-1 rounded-md"><i class="fa fa-trash-alt text-red-600"></i></button>
+                <a href="./editar/?id=<?php echo $produto->getId() ?>" class="inline-flex justify-center items-center w-10 h-10 p-1 rounded-md hover:bg-(--secondary-bg-color) cursor-pointer transition-all focus:shadow-[0_0_0_5px_var(--secondary-bg-color-transparent)]"><i class="fa fa-pencil text-gray-400"></i></a>
+                <a href="../../actions/produto/remover-produto-action.php?id=<?php echo $produto->getId() ?>" class="inline-flex justify-center items-center w-10 h-10 p-1 rounded-md hover:bg-(--secondary-bg-color) cursor-pointer transition-all focus:shadow-[0_0_0_5px_var(--secondary-bg-color-transparent)]"><i class="fa fa-trash-alt text-red-600"></i></a>
               </td>
             </tr>
           <?php endforeach; ?>
