@@ -44,36 +44,36 @@ function normalizeDate(string $data)
       <a href="./adicionar/" class="cursor-pointer px-4 py-2 bg-(--main-color) text-(--main-bg-color) w-full sm:w-fit rounded-lg hover:shadow-[0_0_7.5px_var(--main-color)] focus:shadow-[0_0_0_5px_var(--main-color-transparent)] transition-all"><i class="fa fa-plus"></i> Novo Cliente</a>
     </header>
     <?php if (isset($_SESSION['msg-cliente-criado'])): ?>
-      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+      <div class="message-container flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
         Cliente cadastrado com sucesso.
-        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+        <i class="message fa fa-times cursor-pointer p-1"></i>
       </div>
     <?php
       unset($_SESSION['msg-cliente-criado']);
     endif;
     ?>
     <?php if (isset($_SESSION['msg-cliente-editado-sucesso'])): ?>
-      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+      <div class="message-container flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
         Cliente editado com sucesso.
-        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+        <i class="message fa fa-times cursor-pointer p-1"></i>
       </div>
     <?php
       unset($_SESSION['msg-cliente-editado-sucesso']);
     endif;
     ?>
     <?php if (isset($_SESSION['msg-cliente-deletado-sucesso'])): ?>
-      <div id="successMessage" class="flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
+      <div class="message-container flex gap-2 items-center justify-between bg-green-600/10 border border-green-600/50 rounded text-green-600 px-2 py-1 mt-4">
         Cliente removido com sucesso.
-        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+        <i class="message fa fa-times cursor-pointer p-1"></i>
       </div>
     <?php
       unset($_SESSION['msg-cliente-deletado-sucesso']);
     endif;
     ?>
     <?php if (isset($_SESSION['msg-cliente-deletado-erro'])): ?>
-      <div id="successMessage" class="flex gap-2 items-center justify-between bg-red-600/10 border border-red-600/50 rounded text-red-600 px-2 py-1 mt-4">
+      <div class="message-container flex gap-2 items-center justify-between bg-red-600/10 border border-red-600/50 rounded text-red-600 px-2 py-1 mt-4">
         Erro ao remover cliente.
-        <i id="dismissSuccessMessage" class="fa fa-times cursor-pointer p-1"></i>
+        <i class="message fa fa-times cursor-pointer p-1"></i>
       </div>
     <?php
       unset($_SESSION['msg-cliente-deletado-erro']);

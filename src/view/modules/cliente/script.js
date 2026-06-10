@@ -1,4 +1,5 @@
-const dismissSuccessMessage = document.getElementById('dismissSuccessMessage')
+const dismissMessages = document.querySelectorAll('.message')
+const dismissMessageContainers = document.querySelectorAll('.message-container')
 const dialogMask = document.getElementById('delete-confirmation-dialog-mask')
 const dialog = document.getElementById('delete-confirmation-dialog')
 const dialogDismissButtons = document.querySelectorAll('.dialog-dismiss-button')
@@ -28,8 +29,10 @@ const toggleDialog = () => {
   }
 }
 
-dismissSuccessMessage?.addEventListener('click', () => {
-  document.getElementById('successMessage').classList.add('hidden')
+dismissMessages?.forEach((button, index) => {
+  button.addEventListener('click', () =>
+    dismissMessageContainers[index].classList.add('hidden')
+  )
 })
 
 dialogMask.addEventListener('click', toggleDialog)
