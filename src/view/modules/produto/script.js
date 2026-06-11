@@ -4,9 +4,7 @@ const dialogMask = document.getElementById('delete-confirmation-dialog-mask')
 const dialog = document.getElementById('delete-confirmation-dialog')
 const dialogDismissButtons = document.querySelectorAll('.dialog-dismiss-button')
 const dialogConfirmButton = document.getElementById('dialog-confirm-button')
-const dialogProductNameContainer = document.getElementById(
-  'product-to-delete-name'
-)
+const dialogProductNameContainer = document.getElementById('product-to-delete-name')
 const productNames = document.querySelectorAll('.product-name')
 const deleteButtons = document.querySelectorAll('.delete-button')
 const toggleDialog = () => {
@@ -30,23 +28,30 @@ const toggleDialog = () => {
 }
 
 dismissMessages?.forEach((button, index) => {
-  button.addEventListener('click', () =>
-    dismissMessageContainers[index].classList.add('hidden')
-  )
+  button.addEventListener('click', () => dismissMessageContainers[index].classList.add('hidden'))
 })
 
 dialogMask.addEventListener('click', toggleDialog)
-dialogDismissButtons.forEach((element) =>
-  element.addEventListener('click', toggleDialog)
-)
+dialogDismissButtons.forEach(element => element.addEventListener('click', toggleDialog))
 
 deleteButtons.forEach((element, index) => {
   element.addEventListener('click', () => {
     dialogProductNameContainer.innerText = `\'${productNames[index].innerText}\'`
     dialogConfirmButton.setAttribute(
       'href',
-      `../../actions/produto/remover-produto-action.php?id=${element.dataset.produtoId}`
+      `../../actions/produto/remover-produto-action.php?id=${element.dataset.produtoId}`,
     )
     toggleDialog()
+  })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  dismissMessageContainers?.forEach(element => {
+    setTimeout(() => {
+      element.classList.add('opacity-0')
+      element.classList.add('transition-all')
+      element.classList.add('duration-2000')
+    }, 1000)
+    setTimeout(() => element.classList.add('hidden'), 2000)
   })
 })
