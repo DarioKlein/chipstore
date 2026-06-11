@@ -91,6 +91,15 @@ function normalizePrice($preco)
           </tr>
         </thead>
         <tbody>
+          <?php if (count($listaProdutos) == 0): ?>
+            <tr>
+              <td class="py-4 pl-4 text-center text-gray-400 font-bold h-30" colspan="6">
+                <div class="flex justify-center items-center gap-3 text-lg">
+                  <i class="fa fa-info-circle text-2xl"></i>Nenhum produto cadastrado.
+                </div>
+              </td>
+            </tr>
+          <?php endif; ?>
           <?php foreach ($listaProdutos as $produto): ?>
             <tr class="last:border-b-0 border-b border-b-gray-800 font-bold">
               <td class="product-name py-4 pl-4"><?php echo $produto->getNome() ?></td>
