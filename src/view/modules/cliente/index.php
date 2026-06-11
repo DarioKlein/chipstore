@@ -92,6 +92,15 @@ function normalizeDate(string $data)
           </tr>
         </thead>
         <tbody>
+          <?php if (count($listaClientes) == 0): ?>
+            <tr>
+              <td class="py-4 pl-4 text-center text-gray-400 font-bold h-30" colspan="6">
+                <div class="flex justify-center items-center gap-3 text-lg">
+                  <i class="fa fa-info-circle text-2xl"></i>Nenhum cliente cadastrado.
+                </div>
+              </td>
+            </tr>
+          <?php endif; ?>
           <?php foreach ($listaClientes as $cliente): ?>
             <tr class="last:border-b-0 border-b border-b-gray-800 font-bold">
               <td class="py-4 pl-4">
