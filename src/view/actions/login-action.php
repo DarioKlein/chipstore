@@ -14,7 +14,7 @@ $usuario = $dal->findByEmail($email);
 if (isset($usuario)) {
   if (password_verify($senha, $usuario->getSenha())) {
     $_SESSION['usuario-logado'] = $usuario->getId();
-    header('Location: /view/');
+    header('Location: /view/modules/dashboard');
     exit;
   }
 }
