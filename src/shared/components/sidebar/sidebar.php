@@ -56,9 +56,9 @@ $usuario = $dal->findById($idUsuarioLogado);
       <h5 class="collapsable-text text-sm ml-2 mb-2 text-gray-400">Gerenciamento</h5>
       <ul class="list-none flex flex-col gap-2">
         <li class="sidebar-item rounded-lg transition-all cursor-pointer">
-          <a class="flex-1 p-3 flex gap-2" href="/view/">
+          <a class="flex-1 p-3 flex gap-2" href="/view/modules/dashboard">
             <i
-              class="[display:inline-flex!important] sidebar-icon fa fa-cubes basis-5 justify-center items-center"></i>
+              class="[display:inline-flex!important] sidebar-icon fa fa-chart-line basis-5 justify-center items-center"></i>
             <p class="collapsable-text">Dashboard</p>
           </a>
         </li>
