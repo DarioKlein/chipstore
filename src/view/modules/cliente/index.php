@@ -116,7 +116,7 @@ function normalizeDate(string $data)
             </td>
           </tr>
           <?php if (count($listaClientes) == 0): ?>
-            <tr>
+            <tr id="sem-registros">
               <td class="py-4 pl-4 text-center text-gray-400 font-bold h-30" colspan="6">
                 <div class="flex justify-center items-center gap-3 text-lg">
                   <i class="fa fa-info-circle text-2xl"></i>Nenhum cliente cadastrado.

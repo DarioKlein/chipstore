@@ -66,7 +66,11 @@ function applyFilters() {
     if (visivel) linhasVisiveis++
   })
 
-  document.getElementById('filtro-vazio').style.display = linhasVisiveis === 0 ? 'table-row' : 'none'
+  const temFiltro = [...filterInputs].some(f => f.value.trim() !== '')
+  document.getElementById('filtro-vazio').style.display = linhasVisiveis === 0 && temFiltro ? 'table-row' : 'none'
+
+  const sr = document.getElementById('sem-registros')
+  if (sr) sr.style.display = temFiltro ? 'none' : ''
 }
 
 filterInputs.forEach(f => f.addEventListener('input', applyFilters))
