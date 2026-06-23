@@ -93,7 +93,7 @@ function normalizeDate(string $data)
         <label class="text-xs text-gray-400 block mb-1">Cidade</label>
         <input autocomplete="off" name="cidade" placeholder="Buscar por cidade..." class="w-full sm:w-48 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="cidade">
       </div>
-      <button type="button" id="limpar-filtros" class="w-full sm:w-auto px-3 py-1.5 rounded-lg border border-gray-800 text-gray-400 hover:bg-(--main-bg-color) transition-colors text-sm">Limpar</button>
+      <button type="button" id="limpar-filtros" class="w-full sm:w-auto px-3 py-1.5 rounded-lg border border-gray-800 text-gray-400 hover:bg-(--main-bg-color) hover:shadow-[0_0_7.5px] hover:shadow-gray-800 focus:shadow-[0_0_0_5px] focus:shadow-gray-800/10 transition-all text-sm">Limpar</button>
     </form>
     <div class="border border-gray-800 mt-4 rounded-2xl overflow-auto scrollbar-none max-h-194.5">
       <table class="border-collapse w-full min-w-220">
