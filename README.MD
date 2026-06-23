@@ -18,15 +18,15 @@ Sistema web de gerenciamento para uma loja de componentes eletrônicos, desenvol
 
 ## Tecnologias
 
-| Camada         | Tecnologia                      |
-| -------------- | ------------------------------- |
-| Backend        | PHP 8.5 (Apache)                |
-| Banco de dados | MySQL 8.4                       |
-| ORM / Acesso   | PDO (PHP Data Objects)          |
-| Frontend       | HTML5, Tailwind CSS, JavaScript |
-| Ícones         | Font Awesome (CDN)              |
-| Containers     | Docker & Docker Compose         |
-| Admin DB       | phpMyAdmin                      |
+| Camada         | Tecnologia                          |
+| -------------- | ----------------------------------- |
+| Backend        | PHP 8.5 (Apache)                    |
+| Banco de dados | MySQL 8.4                           |
+| ORM / Acesso   | PDO (PHP Data Objects)              |
+| Frontend       | HTML5, Tailwind CSS, JavaScript     |
+| Ícones         | Font Awesome (CDN), Bootstrap Icons |
+| Containers     | Docker & Docker Compose             |
+| Admin DB       | phpMyAdmin                          |
 
 ---
 
