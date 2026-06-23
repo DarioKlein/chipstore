@@ -124,6 +124,7 @@ class UsuarioDal
                 $usuario->getNome(),
                 $usuario->getEmail(),
                 $usuario->getSenha(),
+                $usuario->getId(),
             ]);
 
             Conexao::desconectar();

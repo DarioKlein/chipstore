@@ -84,10 +84,10 @@ $usuario = $dal->findById($idUsuarioLogado);
           </a>
         </li>
         <li class="sidebar-item rounded-lg transition-all cursor-pointer">
-          <a class="flex-1 p-3 flex gap-2" href="/view/modules/item-pedido/">
+          <a class="flex-1 p-3 flex gap-2" href="/view/modules/usuario/">
             <i
-              class="[display:inline-flex!important] sidebar-icon fa fa-list-ol basis-5 justify-center items-center"></i>
-            <p class="collapsable-text">Itens de Pedido</p>
+              class="[display:inline-flex!important] sidebar-icon fa fa-user-shield basis-5 justify-center items-center"></i>
+            <p class="collapsable-text">Usuários</p>
           </a>
         </li>
       </ul>
