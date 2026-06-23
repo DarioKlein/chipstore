@@ -54,7 +54,7 @@ if (isset($_SESSION['conteudo-cliente-erro'])) {
         <div class="flex flex-col flex-wrap gap-4">
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="nome">Nome completo</label>
-            <input
+            <input autocomplete="off"
               value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
                         ? $cliente->getNome()
                         : ''
@@ -63,26 +63,26 @@ if (isset($_SESSION['conteudo-cliente-erro'])) {
           <div class="flex flex-col flex-1 gap-2">
             <div class="flex flex-col justify-center gap-1">
               <label class="font-bold text-sm" for="email">Email</label>
-              <input value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
-                              ? $cliente->getEmail()
-                              : ''
-                            ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
+              <input autocomplete="off" value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
+                                                  ? $cliente->getEmail()
+                                                  : ''
+                                                ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
             </div>
           </div>
           <div class="flex flex-col sm:flex-row gap-4">
             <div class="flex flex-col justify-center gap-1 flex-1">
               <label class="font-bold text-sm" for="cidade">Cidade</label>
-              <input value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
-                              ? $cliente->getCidade()
-                              : ''
-                            ?>" placeholder="Ex: São Paulo" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="cidade" name="cidade" type="text" required>
+              <input autocomplete="off" value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
+                                                  ? $cliente->getCidade()
+                                                  : ''
+                                                ?>" placeholder="Ex: São Paulo" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="cidade" name="cidade" type="text" required>
             </div>
             <div class="flex flex-col justify-center gap-1 flex-1">
               <label class="font-bold text-sm" for="telefone">Telefone</label>
-              <input value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
-                              ? $cliente->getTelefone()
-                              : ''
-                            ?>" placeholder="(00) 00000-0000" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="telefone" name="telefone" type="tel" required>
+              <input autocomplete="off" value="<?php echo isset($_SESSION['conteudo-cliente-erro'])
+                                                  ? $cliente->getTelefone()
+                                                  : ''
+                                                ?>" placeholder="(00) 00000-0000" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="telefone" name="telefone" type="tel" required>
             </div>
           </div>
         </div>

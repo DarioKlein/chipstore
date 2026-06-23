@@ -111,7 +111,7 @@ function renderizarOpcoesEdicao(array $produtos, array $itensPorProduto, $seleci
       endif; ?>
 
       <form id="order-form" class="flex flex-col gap-8" method="POST" action="../../../actions/pedido/editar-pedido-action.php">
-        <input type="hidden" name="id" value="<?php echo $pedido->getId() ?>">
+        <input autocomplete="off" type="hidden" name="id" value="<?php echo $pedido->getId() ?>">
 
         <section>
           <h3 class="font-bold text-lg mb-4">Dados do pedido</h3>
@@ -128,7 +128,7 @@ function renderizarOpcoesEdicao(array $produtos, array $itensPorProduto, $seleci
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="dataPedido">Data do pedido</label>
-              <input class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="dataPedido" name="dataPedido" type="datetime-local" value="<?php echo htmlspecialchars($conteudo['dataPedido'] ?? date('Y-m-d\TH:i', strtotime($pedido->getDataPedido()))) ?>" required>
+              <input autocomplete="off" class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="dataPedido" name="dataPedido" type="datetime-local" value="<?php echo htmlspecialchars($conteudo['dataPedido'] ?? date('Y-m-d\TH:i', strtotime($pedido->getDataPedido()))) ?>" required>
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="status">Status</label>
@@ -140,7 +140,7 @@ function renderizarOpcoesEdicao(array $produtos, array $itensPorProduto, $seleci
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="pagamento">Forma de pagamento</label>
-              <input class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="pagamento" name="pagamento" type="text" value="<?php echo htmlspecialchars($conteudo['pagamento'] ?? $pedido->getPagamento() ?? '') ?>">
+              <input autocomplete="off" class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="pagamento" name="pagamento" type="text" value="<?php echo htmlspecialchars($conteudo['pagamento'] ?? $pedido->getPagamento() ?? '') ?>">
             </div>
           </div>
         </section>
@@ -168,7 +168,7 @@ function renderizarOpcoesEdicao(array $produtos, array $itensPorProduto, $seleci
                 </div>
                 <div class="flex flex-col gap-1">
                   <label class="font-bold text-sm">Quantidade</label>
-                  <input name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="<?php echo max(1, (int) $item['quantidade']) ?>" required>
+                  <input autocomplete="off" name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="<?php echo max(1, (int) $item['quantidade']) ?>" required>
                 </div>
                 <div class="flex flex-col gap-1">
                   <span class="font-bold text-sm">Subtotal</span>
@@ -213,7 +213,7 @@ function renderizarOpcoesEdicao(array $produtos, array $itensPorProduto, $seleci
       </div>
       <div class="flex flex-col gap-1">
         <label class="font-bold text-sm">Quantidade</label>
-        <input name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="1" required>
+        <input autocomplete="off" name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="1" required>
       </div>
       <div class="flex flex-col gap-1">
         <span class="font-bold text-sm">Subtotal</span>

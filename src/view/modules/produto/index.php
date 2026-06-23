@@ -86,7 +86,7 @@ function normalizePrice($preco)
     <form id="filtros" class="flex flex-wrap gap-3 items-end mt-4" onsubmit="return false">
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Nome</label>
-        <input name="nome" placeholder="Buscar por nome..." class="w-full sm:w-48 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="nome">
+        <input autocomplete="off" name="nome" placeholder="Buscar por nome..." class="w-full sm:w-48 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="nome">
       </div>
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Categoria</label>
@@ -99,11 +99,11 @@ function normalizePrice($preco)
       </div>
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Estoque mín.</label>
-        <input name="estoque_min" placeholder="0" type="number" min="0" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="estoque_min">
+        <input autocomplete="off" name="estoque_min" placeholder="0" type="number" min="0" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="estoque_min">
       </div>
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Estoque máx.</label>
-        <input name="estoque_max" placeholder="999" type="number" min="0" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="estoque_max">
+        <input autocomplete="off" name="estoque_max" placeholder="999" type="number" min="0" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="estoque_max">
       </div>
       <button type="button" id="limpar-filtros" class="w-full sm:w-auto px-3 py-1.5 rounded-lg border border-gray-800 text-gray-400 hover:bg-(--main-bg-color) transition-colors text-sm">Limpar</button>
     </form>

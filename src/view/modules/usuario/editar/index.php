@@ -64,14 +64,14 @@ if (isset($_SESSION['conteudo-editando-usuario-erro'])) {
       ?>
       <form class="flex flex-col flex-wrap gap-8" method="POST" action="../../../actions/usuario/editar-usuario-action.php">
         <div class="flex flex-col flex-wrap gap-4">
-          <input
+          <input autocomplete="off"
             value="<?php echo isset($_GET['id'])
                       ? $usuarioParaEditar->getId()
                       : ''
                     ?>" id="id" name="id" type="hidden">
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="nome">Nome completo</label>
-            <input
+            <input autocomplete="off"
               value="<?php echo isset($_GET['id'])
                         ? $usuarioParaEditar->getNome()
                         : ''
@@ -79,15 +79,15 @@ if (isset($_SESSION['conteudo-editando-usuario-erro'])) {
           </div>
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="email">Email</label>
-            <input value="<?php echo isset($_GET['id'])
-                            ? $usuarioParaEditar->getEmail()
-                            : ''
-                          ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
+            <input autocomplete="off" value="<?php echo isset($_GET['id'])
+                                                ? $usuarioParaEditar->getEmail()
+                                                : ''
+                                              ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
           </div>
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="senha">Senha</label>
             <div class="relative">
-              <input placeholder="Deixe em branco para manter a atual" class="min-w-60 w-full px-2 py-1 pr-10 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="senha" name="senha" type="password">
+              <input autocomplete="off" placeholder="Deixe em branco para manter a atual" class="min-w-60 w-full px-2 py-1 pr-10 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="senha" name="senha" type="password">
               <button type="button" id="toggleSenha" class="absolute inset-y-0 right-0 pr-2 flex items-center text-gray-400 hover:text-white transition-colors">
                 <i class="fa-regular fa-eye" id="toggleSenhaIcon"></i>
               </button>

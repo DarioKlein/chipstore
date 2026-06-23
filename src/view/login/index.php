@@ -104,7 +104,7 @@
             <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
               <i class="fa-regular fa-envelope text-[var(--color-text-muted-500)] group-focus-within:text-[var(--main-color)]"></i>
             </div>
-            <input type="email" id="email" name="email" placeholder="voce@email.com" class="bg-[var(--input-login-bg-color)] border border-[var(--input-login-border-color)] text-[--color-text] text-sm rounded-lg focus:ring-[var(--main-color)] focus:border-[var(--main-color)] block w-full pl-10 p-3 transition-colors outline-none placeholder-[var(--color-text-muted-500)]" required>
+            <input autocomplete="off" type="email" id="email" name="email" placeholder="voce@email.com" class="bg-[var(--input-login-bg-color)] border border-[var(--input-login-border-color)] text-[--color-text] text-sm rounded-lg focus:ring-[var(--main-color)] focus:border-[var(--main-color)] block w-full pl-10 p-3 transition-colors outline-none placeholder-[var(--color-text-muted-500)]" required>
           </div>
         </div>
 
@@ -114,7 +114,7 @@
             <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
               <i class="fa-solid fa-lock text-[var(--color-text-muted-500)] group-focus-within:text-[var(--main-color)]"></i>
             </div>
-            <input type="password" id="password" name="password" placeholder="••••••••" class="bg-[var(--input-login-bg-color)] border border-[var(--input-login-border-color)] text-[--color-text] text-sm rounded-lg focus:ring-[var(--main-color)] focus:border-[var(--main-color)] block w-full pl-10 pr-10 p-3 transition-colors outline-none placeholder-[var(--color-text-muted-500)]" required>
+            <input autocomplete="off" type="password" id="password" name="password" placeholder="••••••••" class="bg-[var(--input-login-bg-color)] border border-[var(--input-login-border-color)] text-[--color-text] text-sm rounded-lg focus:ring-[var(--main-color)] focus:border-[var(--main-color)] block w-full pl-10 pr-10 p-3 transition-colors outline-none placeholder-[var(--color-text-muted-500)]" required>
             <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[var(--color-text-muted-500)] hover:text-[var(--color-text)] transition-colors focus:outline-none">
               <i class="fa-regular fa-eye" id="toggleIcon"></i>
             </button>

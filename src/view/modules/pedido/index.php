@@ -88,11 +88,11 @@ function classesStatusPedido(string $status)
     <form id="filtros" class="flex flex-wrap gap-3 items-end mt-4" onsubmit="return false">
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Nº Pedido</label>
-        <input name="id" placeholder="Ex: 1" type="number" min="1" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="id">
+        <input autocomplete="off" name="id" placeholder="Ex: 1" type="number" min="1" class="w-full sm:w-28 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="id">
       </div>
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Cliente</label>
-        <input name="cliente" placeholder="Buscar por cliente..." class="w-full sm:w-48 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="cliente">
+        <input autocomplete="off" name="cliente" placeholder="Buscar por cliente..." class="w-full sm:w-48 px-3 py-1.5 rounded-lg border border-gray-800 bg-(--input-bg-color) text-sm outline-none focus:border-(--main-color) focus:ring-(--main-color) transition-colors" data-filter="cliente">
       </div>
       <div class="w-full sm:w-auto">
         <label class="text-xs text-gray-400 block mb-1">Status</label>

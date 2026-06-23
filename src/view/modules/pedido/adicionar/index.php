@@ -100,7 +100,7 @@ function renderizarOpcoesProdutos(array $produtos, $selecionado = null)
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="dataPedido">Data do pedido</label>
-              <input class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color) [color-scheme:dark]" id="dataPedido" name="dataPedido" type="datetime-local" value="<?php echo htmlspecialchars($conteudo['dataPedido'] ?? date('Y-m-d\TH:i')) ?>" required>
+              <input autocomplete="off" class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color) [color-scheme:dark]" id="dataPedido" name="dataPedido" type="datetime-local" value="<?php echo htmlspecialchars($conteudo['dataPedido'] ?? date('Y-m-d\TH:i')) ?>" required>
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="status">Status</label>
@@ -112,7 +112,7 @@ function renderizarOpcoesProdutos(array $produtos, $selecionado = null)
             </div>
             <div class="flex flex-col gap-1">
               <label class="font-bold text-sm" for="pagamento">Forma de pagamento</label>
-              <input class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="pagamento" name="pagamento" type="text" placeholder="Ex: PIX, Cartão de crédito" value="<?php echo htmlspecialchars($conteudo['pagamento'] ?? '') ?>">
+              <input autocomplete="off" class="w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" id="pagamento" name="pagamento" type="text" placeholder="Ex: PIX, Cartão de crédito" value="<?php echo htmlspecialchars($conteudo['pagamento'] ?? '') ?>">
             </div>
           </div>
         </section>
@@ -140,7 +140,7 @@ function renderizarOpcoesProdutos(array $produtos, $selecionado = null)
                 </div>
                 <div class="flex flex-col gap-1">
                   <label class="font-bold text-sm">Quantidade</label>
-                  <input name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="<?php echo max(1, (int) ($item['quantidade'] ?? 1)) ?>" required>
+                  <input autocomplete="off" name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="<?php echo max(1, (int) ($item['quantidade'] ?? 1)) ?>" required>
                 </div>
                 <div class="flex flex-col gap-1">
                   <span class="font-bold text-sm">Subtotal</span>
@@ -184,7 +184,7 @@ function renderizarOpcoesProdutos(array $produtos, $selecionado = null)
       </div>
       <div class="flex flex-col gap-1">
         <label class="font-bold text-sm">Quantidade</label>
-        <input name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="1" required>
+        <input autocomplete="off" name="quantidade[]" class="quantity-input w-full px-2 py-2 rounded-lg border border-gray-800 bg-(--input-bg-color) outline-none focus:border-(--main-color)" type="number" min="1" value="1" required>
       </div>
       <div class="flex flex-col gap-1">
         <span class="font-bold text-sm">Subtotal</span>

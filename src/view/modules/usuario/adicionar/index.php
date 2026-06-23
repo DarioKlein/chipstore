@@ -54,7 +54,7 @@ if (isset($_SESSION['conteudo-usuario-erro'])) {
         <div class="flex flex-col flex-wrap gap-4">
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="nome">Nome completo</label>
-            <input
+            <input autocomplete="off"
               value="<?php echo isset($_SESSION['conteudo-usuario-erro'])
                         ? $usuario->getNome()
                         : ''
@@ -62,15 +62,15 @@ if (isset($_SESSION['conteudo-usuario-erro'])) {
           </div>
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="email">Email</label>
-            <input value="<?php echo isset($_SESSION['conteudo-usuario-erro'])
-                            ? $usuario->getEmail()
-                            : ''
-                          ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
+            <input autocomplete="off" value="<?php echo isset($_SESSION['conteudo-usuario-erro'])
+                                                ? $usuario->getEmail()
+                                                : ''
+                                              ?>" placeholder="nome@email.com" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="email" name="email" type="email" required>
           </div>
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="senha">Senha</label>
             <div class="relative">
-              <input placeholder="Mínimo de 6 caracteres" class="min-w-60 w-full px-2 py-1 pr-10 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="senha" name="senha" type="password" required minlength="6">
+              <input autocomplete="off" placeholder="Mínimo de 6 caracteres" class="min-w-60 w-full px-2 py-1 pr-10 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="senha" name="senha" type="password" required minlength="6">
               <button type="button" id="toggleSenha" class="absolute inset-y-0 right-0 pr-2 flex items-center text-gray-400 hover:text-white transition-colors">
                 <i class="fa-regular fa-eye" id="toggleSenhaIcon"></i>
               </button>

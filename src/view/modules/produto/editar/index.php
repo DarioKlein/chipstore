@@ -64,14 +64,14 @@ if (isset($_SESSION['conteudo-editando-produto-erro'])) {
       ?>
       <form class="flex flex-col flex-wrap gap-8" method="POST" action="../../../actions/produto/editar-produto-action.php">
         <div class="flex flex-col flex-wrap gap-4">
-          <input
+          <input autocomplete="off"
             value="<?php echo isset($_GET['id'])
                       ? $produtoParaEditar->getId()
                       : ''
                     ?>" id="id" name="id" type="hidden">
           <div class="flex flex-col justify-center gap-1">
             <label class="font-bold text-sm" for="nome">Nome do produto</label>
-            <input
+            <input autocomplete="off"
               value="<?php echo isset($_GET['id'])
                         ? $produtoParaEditar->getNome()
                         : ''
@@ -142,26 +142,26 @@ if (isset($_SESSION['conteudo-editando-produto-erro'])) {
               </div>
               <div class="flex flex-col justify-center gap-1">
                 <label class="font-bold text-sm" for="estoque">Estoque</label>
-                <input value="<?php echo isset($_GET['id'])
-                                ? $produtoParaEditar->getEstoque()
-                                : ''
-                              ?>" placeholder="0" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="estoque" name="estoque" type="number" min="0" required>
+                <input autocomplete="off" value="<?php echo isset($_GET['id'])
+                                                    ? $produtoParaEditar->getEstoque()
+                                                    : ''
+                                                  ?>" placeholder="0" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="estoque" name="estoque" type="number" min="0" required>
               </div>
             </div>
             <div class="flex flex-col flex-1 gap-2">
               <div class="flex flex-col justify-center gap-1">
                 <label class="font-bold text-sm" for="preco">Preço (R$)</label>
-                <input value="<?php echo isset($_GET['id'])
-                                ? $produtoParaEditar->getPreco()
-                                : ''
-                              ?>" placeholder="0,00" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="preco" name="preco" type="number" min="0" step="0.01" required>
+                <input autocomplete="off" value="<?php echo isset($_GET['id'])
+                                                    ? $produtoParaEditar->getPreco()
+                                                    : ''
+                                                  ?>" placeholder="0,00" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="preco" name="preco" type="number" min="0" step="0.01" required>
               </div>
               <div class="flex flex-col justify-center gap-1">
                 <label class="font-bold text-sm" for="sku">SKU</label>
-                <input value="<?php echo isset($_GET['id'])
-                                ? $produtoParaEditar->getSku()
-                                : ''
-                              ?>" placeholder="Ex: CHP-0001" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="sku" name="sku" type="text" required>
+                <input autocomplete="off" value="<?php echo isset($_GET['id'])
+                                                    ? $produtoParaEditar->getSku()
+                                                    : ''
+                                                  ?>" placeholder="Ex: CHP-0001" class="min-w-60 w-full px-2 py-1 rounded-lg border border-gray-800 bg-(--input-bg-color) focus:ring-(--main-color) focus:border-(--main-color) outline-none transition-colors focus:caret-(--main-color)" id="sku" name="sku" type="text" required>
               </div>
             </div>
           </div>
